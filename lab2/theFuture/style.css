@@ -1,0 +1,44 @@
+* {
+    box-sizing: border-box;
+}
+
+ul{
+    list-style: none;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1em;
+    text-align: center;
+    align-items: center;
+}
+
+ul li{
+    background-color: rgb(225,40,79);
+    font-size: 25px;
+    padding: 1em
+}
+
+ul li.broken{
+    background-color: aqua;
+}
+ul li.cloud{
+    background-color: yellow;
+}
+
+@media(min-width:565px){
+    ul{
+        list-style: none;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1em;
+        text-align: center;
+        
+    }
+    
+    ul li.broken{
+        background-color: aqua;
+    }
+    ul li.cloud{
+        background-color: yellow;
+    }
+
+}
