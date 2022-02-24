@@ -2,5 +2,5 @@
 van Jente Wauman
 
 <a href="https://github.com/r0808/Webtech_lab01"> lab 1 </a>
-<img src="proof.png" alt="proof" width="300" height="300">
+<img src="proof.png" alt="proof" width="600" height="600">
 
