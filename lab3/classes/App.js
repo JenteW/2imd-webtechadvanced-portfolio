@@ -1,3 +1,6 @@
+import Todo from './Todo.js';
+import todo from './Todo.js';
+
 export default class App {
     constructor() {
         console.log("🍕");
@@ -22,6 +25,7 @@ export default class App {
     createItem(e) {
         if (e.key === "Enter") {
             console.log("📕");
+            let todo = new Todo("this is demo stonks");
         }
 
         this.reset();
