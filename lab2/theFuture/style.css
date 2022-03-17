@@ -2,43 +2,67 @@
     box-sizing: border-box;
 }
 
-ul{
-    list-style: none;
+ div.container{
     display: grid;
     grid-template-columns: 1fr;
-    gap: 1em;
-    text-align: center;
-    align-items: center;
+    gap: 0.5em;
+    background-color: white;
 }
 
-ul li{
+div{
     background-color: rgb(225,40,79);
-    font-size: 25px;
-    padding: 1em
+    font-size: 1.5em;
+    padding: 1em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
 }
 
-ul li.broken{
+div.broken{
     background-color: aqua;
+    grid-row: 3/4;
 }
-ul li.cloud{
+div.cloud{
     background-color: yellow;
+    grid-row: 6/7;
+
 }
 
 @media(min-width:565px){
-    ul{
-        list-style: none;
-        display: grid;
-        grid-template-columns: 1fr 1fr;
+    .container{
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(5, 1fr);
         gap: 1em;
         text-align: center;
         
     }
     
-    ul li.broken{
-        background-color: aqua;
-    }
-    ul li.cloud{
-        background-color: yellow;
+    div.broken{
+        grid-column: 1/2;
+        grid-row: 2/3;
+        }
+    div.cloud{
+        grid-column: 2/3;
+        grid-row: 3/4;
     }
 
+}
+@media(min-width:900px){
+    .container{
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        gap: 0.5em;
+        
+    }
+    
+    div.broken{
+        grid-column: 3/4;
+        grid-row: 1/-1;
+    }
+    div.cloud{
+        grid-column: 4/6;
+        grid-row: 2/4;
+    }
 }
