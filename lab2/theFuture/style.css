@@ -6,17 +6,20 @@
     display: grid;
     grid-template-columns: 1fr;
     gap: 0.5em;
-    background-color: white;
+    background: none;
+    text-align: center;
 }
-
 div{
-    background-color: rgb(225,40,79);
     font-size: 1.5em;
     padding: 1em;
+}
+
+.future{
+    background-color: rgb(225,40,79);
     display: flex;
     align-items: center;
     justify-content: center;
-    text-align: center;
+    
 }
 
 div.broken{
@@ -30,10 +33,10 @@ div.cloud{
 }
 
 @media(min-width:565px){
-    .container{
+    div.container{
         grid-template-columns: repeat(2, 1fr);
         grid-template-rows: repeat(5, 1fr);
-        gap: 1em;
+        gap: 0.5em;
         text-align: center;
         
     }
@@ -41,6 +44,7 @@ div.cloud{
     div.broken{
         grid-column: 1/2;
         grid-row: 2/3;
+        
         }
     div.cloud{
         grid-column: 2/3;
@@ -49,7 +53,7 @@ div.cloud{
 
 }
 @media(min-width:900px){
-    .container{
+    div.container{
         display: grid;
         grid-template-columns: repeat(5, 1fr);
         grid-template-rows: repeat(3, 1fr);
@@ -60,6 +64,8 @@ div.cloud{
     div.broken{
         grid-column: 3/4;
         grid-row: 1/-1;
+        text-align: center;
+
     }
     div.cloud{
         grid-column: 4/6;
